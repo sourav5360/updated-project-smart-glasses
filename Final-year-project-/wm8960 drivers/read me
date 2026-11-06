@@ -1,0 +1,21 @@
+Get the WM8960 soundcard source code. and install all linux kernel drivers
+
+
+git clone https://github.com/waveshare/WM8960-Audio-HAT
+cd WM8960-Audio-HAT
+sudo ./install.sh 
+sudo reboot
+
+
+after installing these drivers in linux kernel one should manually Check that the sound card name matches the source code wm8960-soundcard.
+
+pi@raspberrypi:~ $ aplay -l
+
+pi@raspberrypi:~ $ arecord -l
+
+
+if you want to upgrade the drivers , you first need to unisntall the driver first  using linux kernel
+
+pi@raspberrypi:~/WM8960-Audio-HAT $ sudo ./uninstall.sh 
+
+

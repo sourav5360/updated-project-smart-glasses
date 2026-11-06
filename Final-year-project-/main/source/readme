@@ -1,0 +1,25 @@
+How to compile and run the upgraded Smart Glasses HUD Server on Raspberry Pi Zero W:
+
+Option 1 (Using Makefile):
+  make
+  sudo ./raspberry
+
+Option 2 (Direct GCC command):
+  sudo gcc -O2 raspberry.c ssd1306_i2c.c -lwiringPi -lbluetooth -lpthread -o raspberry
+  sudo ./raspberry
+
+Optional Audio TTS Package (for WM8960 Audio HAT voice announcements):
+  sudo apt-get install espeak alsa-utils
+
+Supported Protocol Commands (over Bluetooth RFCOMM Channel 1, Wi-Fi TCP Port 8888, or local STDIN):
+  SYS|<HH:MM>|<Date>|<PhoneBattery%>|<Weather>
+  NOTIF|<WHATSAPP/SMS/EMAIL/SOCIAL>|<Sender/Title>|<Message Body>
+  NAV|<STRAIGHT/LEFT/RIGHT/SLIGHT_LEFT/SLIGHT_RIGHT/UTURN/ARRIVED>|<Distance>|<Street>|<ETA>
+  MUSIC|<PLAY/PAUSE>|<Track Title>|<Artist>|<Progress 0-100>
+  CALL|<RINGING/ACTIVE/ENDED>|<Caller Name>|<Phone Number>
+  BMP|<2048 hex characters (128x64 1-bit dithered frame)>
+  TTS|<Text to speak aloud on WM8960 Audio HAT | ON | OFF>
+  MIRROR|<flip_x: 0/1>|<flip_y: 0/1>
+  BRIGHTNESS|<0-255>
+  MODE|<DASHBOARD|NOTIF|NAV|MUSIC>
+  NEXT / PREV / clear

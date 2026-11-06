@@ -1,0 +1,27 @@
+Method 1 – Using “Raspi-config” on Command Line
+
+sudo raspi-config
+( This will launch the raspi-config utility. Select “Interfacing Options” )
+Highlight the “I2C” option and activate “<Select>”.
+Select and activate “<Yes>” 
+When prompted to reboot highlight and activate “<Yes>” ( AND ITS DONE)
+
+
+
+Method 2 – Using “Raspberry Pi Configuration”
+ Menu > Preferences > Raspberry Pi Configuration
+ select the “Interfaces” tab and set I2C to “Enabled” 
+ 
+ 
+ 
+ STEP 2
+ sudo apt-get update
+sudo apt-get install -y python-smbus i2c-tools
+
+STEP 3
+
+Shutdown your Pi using :
+
+sudo halt
+
+Wait for ten seconds, disconnect the power to your Pi and you are now ready to connect your I2C hardware

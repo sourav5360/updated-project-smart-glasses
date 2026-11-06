@@ -1,0 +1,29 @@
+================================================================================
+                    SMART GLASSES HUD v2.0 - COMPONENTS LIST
+================================================================================
+
+A. UPGRADED PRO CONFIGURATION (0.23" HDMI Micro-OLED Prism Edition):
+  1. Compute Board    : Raspberry Pi Zero 2 W (Quad-core 64-bit, Wi-Fi + Bluetooth)
+                        (Drop-in replacement for Raspberry Pi Zero W, 5x faster)
+  2. Optical Display  : 0.23" HDMI Micro-OLED Optical Prism Module (640x400 / 3000 nits)
+                        + Ultra-Thin Flexible FPC Mini-HDMI Ribbon Cable
+                        (Replaces separate OLED screen + DIY magnifying glass!)
+  3. Audio System     : Waveshare WM8960 Audio HAT + 8-Ohm 1W Bone Conduction
+                        Transducer (for private temple audio) + Dual MEMS Microphones
+  4. Camera (Vision)  : Raspberry Pi Camera Module 3 (or ZeroCam) with Zero CSI Ribbon
+                        (For POV photos/video, QR scanning, & AI Vision translation)
+  5. Gesture & IMU    : APDS-9960 I2C Hand Gesture Sensor (Swipe Left/Right/Up/Down)
+                        + BNO055 / MPU6050 6/9-Axis IMU (AR Compass & Head-Tilt Wake)
+  6. Smart Power      : PiSugar 3 (1200mAh LiPo + I2C Fuel Gauge for exact Glasses
+                        Battery % readout) or 3.7V LiPo + 5V Boost + MAX17048 Gauge
+
+--------------------------------------------------------------------------------
+B. ORIGINAL / BASE CONFIGURATION (Also 100% Supported):
+  1. A 5V Battery + Power Bank Module
+  2. Raspberry Pi Zero W
+  3. 0.96" SSD1306 I2C OLED Display (or 1.3" ST7789 240x240 SPI IPS Display)
+  4. Resistors and capacitors
+  5. Magnifying glass + 45-degree transparent combiner lens
+  6. Bluetooth (built-in)
+  7. Microphone & Speaker (via WM8960 Audio HAT)
+  8. Connecting wires

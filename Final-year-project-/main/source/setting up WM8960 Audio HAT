@@ -1,0 +1,19 @@
+Clone the driver from https://github.com/waveshare/WM8960-Audio-HAT
+cd WM8960-Audio-HAT
+sudo ./install.sh
+sudo reboot
+for checking the drivers sudo dkms status 
+it should show the kernel version else you need to install it again
+Check sound card status of Raspberry Pi with command aplay -l and arecord -l
+Use arecord to record audio and play 
+sudo arecord -f cd -Dhw:1 | aplay -Dhw:1
+To setting sound and adjust volume, you can use alsamixer tool
+sudo alsamixer
+SET DEFAULT SOUND CARD
+sudo vi /usr/share/alsa/alsa.conf
+defaults.ctl.card 0 
+defaults.pcm.card 0
+Modify these statements from 0 to 1
+to play mp3
+sudo apt-get install mpg123
+sudo mpg123 test.mp3

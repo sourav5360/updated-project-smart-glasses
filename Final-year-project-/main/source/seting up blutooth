@@ -1,0 +1,7 @@
+Go to terminal 
+sudo bluetoothctl enter passward
+scan on and press enter on the device you want to connect 
+to enable graphic user interface type sudo apt-get install bluetooth bluez blueman 
+reboot your pi
+there would be graphical icon on the desktop 
+you can use the graphical icon to connect with your device

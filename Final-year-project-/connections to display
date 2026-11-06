@@ -1,0 +1,46 @@
+How to connect raspberrypie zero w to oled screen by i2c
+
+
+
+Oled display 
+Respberry pie
+ 
+VIN
+1
+1
+3.3 v
+GND
+3
+6
+GND
+SCL
+5
+5
+SCL
+SDA
+6
+3
+SDA
+
+1. First of all, we need to update the Pi software to the latest, issue
+        sudo apt-get update
+           sudo apt-get upgrade.
+
+2. Enable I2C and SPI modules directly with raspi-config tool, issue a
+                   sudo raspi-config
+
+Then go to menu Advanced Option, select i2c and under question ” Would you like the i2c kernel module to be loaded by default ?”, select Yes
+
+3. To be able to compile you will need the compiler and some others tools, issue a :
+    sudo apt-get install build-essential git-core libi2c-dev i2c-tools lm-sensors
+
+4. Get all the file from github dedicated repo :
+   
+
+git clone https://github.com/hallard/ArduiPi_OLED
+
+
+5.  detect if the oled is connect by issue a
+       sudo i2cdetect  -y 1
+6.  run a program and check if everthing is working.
+
